@@ -1,4 +1,4 @@
-Feature: Online-message
+Feature: Write an online-message
 In order to communicate with other users
 As an teenager
 I want to download application from App Store or Play Market, then register/login,
