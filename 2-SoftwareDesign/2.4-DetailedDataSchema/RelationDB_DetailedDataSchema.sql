@@ -25,7 +25,7 @@ CREATE TABLE employee ( -- опис співробітника
 	employee_id INT, -- id співробітника
 	position VARCHAR(50), -- посада
 	salary NUMBER(7,2), -- з/п
-	date_of_employment DATA, -- дата найму на роботу
+	date_of_employment DATE, -- дата найму на роботу
 	user_id INT -- id користувача
 );
 
