@@ -18,7 +18,7 @@ CREATE TABLE user ( -- опис користувача
 	full_name VARCHAR(100), -- ПІБ
 	phone VARCHAR(20), -- номер телефону
 	pseudonym VARCHAR(100), -- псевдонім
-	--avatar, -- аватарка
+	avatar BINARY(1), -- аватарка
 );
 
 CREATE TABLE employee ( -- опис співробітника
