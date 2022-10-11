@@ -1,4 +1,3 @@
 ### Схема моделі даних
 
-
-![RelDB](https://user-images.githubusercontent.com/79566277/193781069-0fa1a489-4e25-45e9-906e-10fca13b49b1.jpg)
+![RelDB_v4](https://user-images.githubusercontent.com/79566277/194773673-c4bed28e-1263-4d28-97ff-324f07cd0be8.jpg)
