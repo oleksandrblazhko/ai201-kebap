@@ -1,0 +1,18 @@
+@startuml
+
+title Conditional - Activity Diagram 
+
+start
+
+:The user confirms the order;
+:the program displays a selection window;
+
+if (confirm order?) then (Yes)
+  :order confirmed 😄;
+else (No)
+  :the order was rejected 🙁;
+endif
+
+stop
+
+@enduml
