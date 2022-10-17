@@ -10,7 +10,7 @@ start
 if (confirm order?) then (Yes)
   :order confirmed 😄;
 else (No)
-  :the order was rejected 😣😢😭😩;
+  :the order was rejected 😢;
 endif
 
 stop
