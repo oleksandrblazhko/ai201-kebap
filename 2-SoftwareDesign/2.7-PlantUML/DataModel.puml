@@ -1,0 +1,51 @@
+@startuml
+title Relation Schema
+hide circle
+entity "User" as us {
+  (PK)user_id
+  --
+  full_name
+  phone
+  pseudonym
+  avatar
+}
+
+entity "Employee" as emp {
+  (PK)employee_id
+  --
+  position
+  salary
+  date_of_employment
+  (FK)user_id
+}
+
+entity "Order" as ord {
+  (PK)order_id
+  --
+  order_time
+  delivery_time
+  delivery_address
+  total_price
+  (FK)user_id
+  (FK)employee_id
+}
+
+entity "Product" as prod {
+  (PK)product_id
+  --
+  name
+  price
+}
+
+entity "order-product" as ord_prod {
+  (FK)order_id
+  (FK)product_id
+}
+
+us --- emp
+us --{ ord
+emp --{ ord
+prod --{ ord_prod
+ord --{ ord_prod
+
+@enduml
