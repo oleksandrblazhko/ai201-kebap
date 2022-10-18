@@ -1,0 +1,13 @@
+@startuml
+title Classes Diagram
+
+Class User
+Class Employee
+Class Order
+Class Product
+
+User <|-- Employee
+User"1" -up-> "*"Order : form
+Employee"1" -up-> "*"Order : processes
+Order"*" --o "*"Product : contains
+@enduml

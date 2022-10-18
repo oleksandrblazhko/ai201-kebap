@@ -1,0 +1,16 @@
+@startuml 
+title Usecase for Information system
+left to right direction
+skinparam packageStyle rect
+
+actor User
+
+rectangle {
+  User --> (User Authorization)
+  (Confirm the order) ..> (User Authorization) : <<include>>
+  (make a online-call) ..> (User Authorization) : <<include>>
+  (write a online-message) ..> (User Authorization) : <<include>>
+  (pay for the service) ..> (User Authorization) : <<include>>
+  (create an order for water delivery) ..> (User Authorization) : <<include>>
+}
+@enduml
