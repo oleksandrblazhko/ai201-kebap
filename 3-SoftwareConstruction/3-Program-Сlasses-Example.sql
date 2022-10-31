@@ -18,7 +18,7 @@ CREATE OR REPLACE TYPE Employee UNDER My_user (
 	position VARCHAR(50), -- посада
 	salary NUMBER(7,2), -- з/п
 	date_of_employment DATE, -- дата найму на роботу
-	user_id INT -- id користувача
+	my_user My_user -- користувач
 	/* перевизначення методу-процедури класу My_user */
     	OVERRIDING MEMBER PROCEDURE display 
 );
