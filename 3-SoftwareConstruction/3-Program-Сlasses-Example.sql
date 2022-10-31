@@ -53,7 +53,7 @@ CREATE OR REPLACE TYPE Product AS OBJECT (
     	CONSTRUCTOR FUNCTION Product(p_pname VARCHAR)
         	RETURN SELF AS RESULT,
 		/* Процедура зміни значення атрибутів */
-		MEMBER PROCEDURE set_pname(product_id NUMBER, name VARCHAR, price NUMBER),
+		MEMBER PROCEDURE set_pname(p_product_id NUMBER, p_pname VARCHAR, p_price NUMBER),
     		/* Функції отримання значень атрибутів */
 		MEMBER FUNCTION get_product_id RETURN NUMBER,
 		MEMBER FUNCTION get_pname RETURN VARCHAR,
