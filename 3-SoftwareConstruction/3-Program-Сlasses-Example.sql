@@ -72,8 +72,8 @@ CREATE OR REPLACE TYPE My_order AS OBJECT (
 	delivery_time TIME, -- час доставки
 	delivery_address VARCHAR(100), -- адреса доставки
 	total_price NUMBER(6,2), -- загальна ціна
-	user_id INT, -- id замовника
-	employee_id INT, -- id працівника, відповідального за це замовлення
+	my_user My_user, --  замовник
+	employee Employee, -- працівник, відповідального за це замовлення
 	products Products_List, -- список товарів в замовленні
 	/* Процедура виводу на екран значень атрибутів */
     	MEMBER PROCEDURE display
