@@ -94,7 +94,16 @@ CREATE OR REPLACE TYPE BODY My_order AS
 		dbms_output.put_line('delivery_address: ' || Self.delivery_address);
 		dbms_output.put_line('total_price: ' || Self.total_price);
 		dbms_output.put_line('user_id: ' || Self.user_id);
-		dbms_output.put_line('employee_id: ' || Self.employee_id); 
+		dbms_output.put_line('employee_id: ' || Self.employee_id);
+        dbms_output.put('Products: {'); 
+        FOR i IN 1..products.COUNT LOOP
+			dbms_output.put(Products(i).name);
+			dbms_output.put(Products(i).price);
+            IF i < Products.COUNT THEN 
+                dbms_output.put(',');
+            END IF;
+        END LOOP;
+        dbms_output.put_line('}');		
     END display;
 END; 
 /
