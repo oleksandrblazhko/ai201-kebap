@@ -62,7 +62,8 @@ CREATE OR REPLACE TYPE Product AS OBJECT (
     	MEMBER PROCEDURE display
 ); 
 /
-
+/* Створення типу для зберігання списку співробітників - "Колекція екземплярів об`єктів класу Product */
+CREATE TYPE Products_List IS TABLE OF Product;
 
 /* Створення об'єктного типу (класу) My_order */
 CREATE OR REPLACE TYPE My_order AS OBJECT (
@@ -73,7 +74,7 @@ CREATE OR REPLACE TYPE My_order AS OBJECT (
 	total_price NUMBER(6,2), -- загальна ціна
 	user_id INT, -- id замовника
 	employee_id INT, -- id працівника, відповідального за це замовлення
-	prod Product, -- список товарів в замовленні
+	products Products_List, -- список товарів в замовленні
 	/* Процедура виводу на екран значень атрибутів */
     	MEMBER PROCEDURE display
 ); 
