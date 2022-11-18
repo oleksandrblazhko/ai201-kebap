@@ -15,9 +15,9 @@ class TestCasesModified {
             CallableStatement cstmt1 = con.prepareCall("{? = call send_message(?,?)}");
             cstmt1.registerOutParameter(1,Types.NUMERIC);
             cstmt1.setString(2,"текст повідомлення");
-            cstmt1.setString(3,"+730625816525");
+            cstmt1.setString(3,"dsadasasd");
             cstmt1.executeUpdate();
-            System.out.print("TC1: send_message('текст повідомлення','+730625816525') очікуваний результат 1, результат:" + cstmt1.getInt(1));
+            System.out.print("TC1: send_message('текст повідомлення','dsadasasd') очікуваний результат 1, результат:" + cstmt1.getInt(1));
             if(cstmt1.getInt(1) == 1) System.out.println("Passed");
             else{System.out.println("Failed");
                 testcaseResult = -1;}
